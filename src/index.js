@@ -1,7 +1,6 @@
 import { div } from 'prelude-ls';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ProgressPlugin } from 'webpack';
 import './index.css';
 
 function WelcomeFunk ({name, children}) {
