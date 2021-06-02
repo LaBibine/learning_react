@@ -62,14 +62,18 @@ class Incrementer extends React.Component {
   }
 
   increment () {
-    this.setState(function (state, props) {
-      return {n: state.n + 1}
-    })
+    this.setState((state, props) => ({n: state.n + props.step}))
   }
 
   render () {
     return <div>Valeur : {this.state.n}</div>
   }
+
+}
+
+Incrementer.defaultProps = {
+start: 0,
+step: 1,
 }
 
 function Home () {
@@ -79,6 +83,7 @@ function Home () {
     <Welcome name="Jean"/>
     <Clock/>
     <Incrementer start={0}/>
+    <Incrementer start={100} step={10} />
   </div>
 }
 
